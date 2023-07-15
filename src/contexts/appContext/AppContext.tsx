@@ -51,6 +51,8 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
         return 5;
       case 5:
         return 4;
+      default:
+        return 4;
     }
   }, [numberOfPlayers]);
 

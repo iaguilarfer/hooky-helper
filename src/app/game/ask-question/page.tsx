@@ -13,7 +13,7 @@ export default function AskQuestion() {
     value: player.name,
   }));
 
-  const [selectedPlayer, setSelectedPlayer] = useState();
+  const [selectedPlayer, setSelectedPlayer] = useState<string | null>(null);
   const [word, setWord] = useState<string>("");
 
   const [response, setResponse] = useState("");
@@ -48,8 +48,8 @@ export default function AskQuestion() {
           <Dropdown
             selection={true}
             options={options}
-            value={selectedPlayer}
-            onChange={(event, data) => setSelectedPlayer(data.value)}
+            value={selectedPlayer as string}
+            onChange={(event, data) => setSelectedPlayer(data.value as string)}
           />
         </Form.Field>
         <Form.Field>
