@@ -21,7 +21,7 @@ export default function AskQuestion() {
   const onClickAsk = () => {
     const selectedPlayerLetters = players.find(
       (player) => player.name === selectedPlayer
-    ).letters;
+    )?.letters;
     if (selectedPlayerLetters) {
       const numberOfLettersInWord = word.split("").reduce((acc, letter) => {
         if (selectedPlayerLetters.includes(letter)) {
