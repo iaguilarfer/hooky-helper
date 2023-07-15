@@ -2,7 +2,7 @@
 
 import styles from "./page.module.scss";
 import { useAppContext } from "../contexts/appContext/AppContext";
-import { Button } from "antd";
+import { Button } from "semantic-ui-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -14,9 +14,9 @@ export default function Home() {
 
       <Link href={"/setup"}>
         <Button
-          type={"primary"}
+          className={styles.button}
           size={"large"}
-          style={{ fontSize: "3rem", height: "auto" }}
+          primary={true}
           onClick={() => {
             setHasGameStarted((prevState: boolean) => !prevState);
           }}

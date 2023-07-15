@@ -6,3 +6,10 @@
   justify-content: center;
   align-items: center;
 }
+
+:global(#app) {
+  .button {
+    font-size: 2rem;
+    height: auto;
+  }
+}

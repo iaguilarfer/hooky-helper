@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "antd";
+import { Button } from "semantic-ui-react";
 import styles from "./page.module.scss";
 import Link from "next/link";
 
@@ -12,11 +12,8 @@ export default function Setup() {
       <h1>Select number of players:</h1>
       <div className={styles.buttons}>
         {numberOfPlayersOptions.map((option) => (
-          <Link key={option} href={"/setup/mode"}>
-            <Button
-              type={"primary"}
-              style={{ fontSize: "3rem", height: "auto" }}
-            >
+          <Link key={option} href={"/setup/add-player"}>
+            <Button primary={true} className={styles.button}>
               {`${option} Players`}
             </Button>
           </Link>

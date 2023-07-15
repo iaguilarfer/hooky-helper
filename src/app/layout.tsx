@@ -1,8 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { AppContext, AppProvider } from "../contexts/appContext/AppContext";
+import { AppProvider } from "../contexts/appContext/AppContext";
 import styles from "./page.module.scss";
+import "semantic-ui-css/semantic.min.css";
 
 const inter = Inter({ weight: "400", subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <AppProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body id="app" className={inter.className}>
           <main className={styles.main}>{children}</main>
         </body>
       </html>

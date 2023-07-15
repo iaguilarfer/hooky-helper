@@ -24,3 +24,10 @@
   font-size: 5rem;
   margin-bottom: 3rem;
 }
+
+:global(#app) {
+  .button {
+    font-size: 2rem;
+    height: auto;
+  }
+}

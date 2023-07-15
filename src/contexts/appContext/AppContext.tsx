@@ -9,7 +9,6 @@ import {
   useContext,
   useState,
 } from "react";
-import { StyleProvider } from "@ant-design/cssinjs";
 
 export interface AppContextProps {
   hasGameStarted: boolean;
@@ -31,10 +30,8 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   const [hasGameStarted, setHasGameStarted] = useState(false);
 
   return (
-    <StyleProvider hashPriority={"high"}>
-      <AppContext.Provider value={{ hasGameStarted, setHasGameStarted }}>
-        {children}
-      </AppContext.Provider>
-    </StyleProvider>
+    <AppContext.Provider value={{ hasGameStarted, setHasGameStarted }}>
+      {children}
+    </AppContext.Provider>
   );
 };
