@@ -71,6 +71,8 @@ export default function AddPlayer() {
         disabled={!isFormReady}
         primary={true}
         onClick={onClickSavePlayer}
+        fluid={true}
+        className={styles["add-button"]}
       >
         Add player
       </Button>
